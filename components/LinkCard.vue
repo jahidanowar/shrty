@@ -9,7 +9,7 @@ const config = useRuntimeConfig();
 
 <template>
   <div
-    class="link card mb-5 flex justify-between hover:border-white/30 transition-all duration-200"
+    class="link card mb-5 flex justify-end sm:justify-between flex-wrap gap-5 hover:border-white/30 transition-all duration-200"
   >
     <div>
       <div class="text-xl">
@@ -17,7 +17,7 @@ const config = useRuntimeConfig();
         }}<span class="text-amber-500 font-bold">/{{ link.key }}</span>
       </div>
       <div class="text-white/50">
-        {{ link.long_url.slice(0, 40) + "..." }}
+        {{ link.long_url.slice(0, 30) + "..." }}
       </div>
     </div>
     <div class="link-ation flex justify-between">

@@ -67,10 +67,10 @@ const handleShorten = async (e: Event) => {
 
 <template>
   <form
-    class="mt-10 card flex justify-between items-middle gap-5"
+    class="mt-10 card flex flex-wrap justify-between items-middle gap-5"
     @submit.prevent="handleShorten"
   >
-    <div class="form-group w-6/12">
+    <div class="form-group w-full sm:w-6/12">
       <label for="long_url" class="text-white/30 text-xs mb-1 block"
         >Long URL</label
       >
@@ -84,7 +84,7 @@ const handleShorten = async (e: Event) => {
         {{ errors.long_url }}</span
       >
     </div>
-    <div class="form-group w-4/12">
+    <div class="form-group w-full sm:w-4/12">
       <label for="key" class="text-white/30 text-xs mb-1 block"
         >Short Key</label
       >
@@ -100,7 +100,7 @@ const handleShorten = async (e: Event) => {
         {{ errors.key }}</span
       >
     </div>
-    <div class="w-2/12 flex justify-end self-end">
+    <div class="w-full sm:w-2/12 flex justify-end self-end">
       <button
         type="submit"
         class="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 w-full hover:shadow-xl transition-all duration-200"

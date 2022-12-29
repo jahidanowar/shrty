@@ -28,7 +28,7 @@ body::before{
     background: linear-gradient(88.68deg, #D97706 -36.99%, #F59E0B 111.2%);
 }
 .card{
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-5 min-w-[400px];
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-5 min-w-[350px];
 }
 
 input[type="text"], input[type="email"], input[type="password"]{

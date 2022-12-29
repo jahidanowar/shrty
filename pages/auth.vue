@@ -28,7 +28,7 @@ const handleGithubLogin = async () => {
   <div class="auth h-screen grid place-content-center">
     <div class="container mx-auto">
       <div
-        class="card bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-5 w-[400px] text-center"
+        class="card bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-5 w-[300px] text-center"
       >
         <div class="text-center flex justify-center">
           <div class="p-4 border rounded-full border-white/10">

@@ -17,7 +17,7 @@ const handleLogout = async () => {
   >
     <nav class="container mx-auto py-4 flex justify-between items-center">
       <NuxtLink to="/" class="navbar-brand text-2xl font-bold text-white">
-        tnyl
+        shrty
       </NuxtLink>
       <ul class="flex items-center">
         <li class="mr-6 text-xs">
