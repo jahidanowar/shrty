@@ -11,15 +11,15 @@ const config = useRuntimeConfig();
   <div
     class="link card mb-5 flex justify-between gap-5 hover:border-white/30 transition-all duration-200"
   >
-    <div>
+    <div class="w-1/2">
       <div class="text-xl">
         <span class="text-amber-500 font-bold">/{{ link.key }}</span>
       </div>
-      <div class="text-white/50">
+      <div class="text-white/50 text-xs sm:text-base">
         {{ link.long_url.slice(0, 20) + "..." }}
       </div>
     </div>
-    <div class="link-ation flex justify-between">
+    <div class="w-1/2 link-ation flex justify-end">
       <div class="link-stats flex flex-col items-end justify-center">
         <div class="flex items-end">
           <span class="text-white leading-none text-sm sm:text-base">
