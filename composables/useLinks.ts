@@ -1,4 +1,4 @@
-// import geoip from "geoip-lite";
+import geoip from "geoip-lite";
 import { Database } from "~~/types/supabase";
 
 export const useLinks = () => {
@@ -55,52 +55,9 @@ export const useLinks = () => {
     return res;
   };
 
-  const redirect = async (key: string) => {
-    const { data } = await client
-      .from("links")
-      .select("*")
-      .eq("key", key)
-      .single();
-    if (data) {
-      const clickData: any = {};
-
-      const ua = useUserAgent();
-
-      console.log({ ua });
-
-      if (ua) {
-        clickData.user_agent = ua.userAgent;
-        clickData.ip = ua.ip;
-
-        if (ua.ip) {
-          // const geo = geoip && geoip.lookup(ua.ip);
-          // if (geo) {
-          //   clickData.country = geo.country;
-          //   clickData.city = geo.city;
-          // }
-        }
-      }
-
-      const click = await client.from("clicks").insert({
-        link_id: data.id,
-        ...clickData,
-      });
-
-      console.log({ click });
-
-      useExternalRedirect(data.long_url, 302);
-    } else {
-      throw createError({
-        statusCode: 404,
-        message: "Link not found",
-      });
-    }
-  };
-
   return {
     getAllLinks,
     getLink,
     createLink,
-    redirect,
   };
 };
