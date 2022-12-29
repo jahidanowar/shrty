@@ -13,6 +13,9 @@ const handleGithubLogin = async () => {
     isLoading.value = true;
     auth.signInWithOAuth({
       provider: "github",
+      options: {
+        redirectTo: "http://localhost:3000",
+      },
     });
   } catch (error) {
     console.log(error);

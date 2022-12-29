@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { Database } from "~~/types/supabase";
-
 useHead({
   title: "Dashboard",
 });
@@ -8,18 +6,7 @@ definePageMeta({
   middleware: "auth",
 });
 
-const client = useSupabaseClient<Database>();
-const user = useSupabaseUser();
-
-const { data, refresh } = useAsyncData("links", async () => {
-  // Get all links and count the total clicks for each link (using the `count` aggregate function)
-  const { data } = await client
-    .from("links")
-    .select("*")
-    .eq("user_id", user.value?.id)
-    .order("created_at", { ascending: false });
-  return data;
-});
+const { data, refresh } = await useLinks().getAllLinks();
 
 const handleRefresh = (newLink: any) => {
   refresh();

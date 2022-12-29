@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { nanoid } from "nanoid";
 
-const client = useSupabaseClient();
 const user = useSupabaseUser();
 
 const isLoading = ref<boolean>(false);
@@ -47,11 +46,10 @@ const handleShorten = async (e: Event) => {
 
   try {
     isLoading.value = true;
-    const { data, error } = await client.from("links").insert({
-      long_url: form.value.long_url,
-      key: form.value.key,
-      user_id: user.value.id,
-    });
+    const { data, error } = await useLinks().createLink(
+      form.value.long_url,
+      form.value.key
+    );
     if (!error) {
       emits("shorten", data);
       form.value.long_url = "";

@@ -13,8 +13,8 @@ const config = useRuntimeConfig();
   >
     <div>
       <div class="text-xl">
-        {{ config.public.appUrl }}
-        <span class="text-amber-500 font-bold">/{{ link.key }}</span>
+        {{ config.public.appUrl
+        }}<span class="text-amber-500 font-bold">/{{ link.key }}</span>
       </div>
       <div class="text-white/50">
         {{ link.long_url.slice(0, 40) + "..." }}
