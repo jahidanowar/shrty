@@ -36,6 +36,6 @@ input[type="text"], input[type="email"], input[type="password"]{
 }
 
 input[type="text"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    @apply text-white/80 opacity-50 text-sm;
+    @apply text-white/80 opacity-50;
   }
   

@@ -67,7 +67,7 @@ const handleShorten = async (e: Event) => {
 
 <template>
   <form
-    class="mt-10 card flex flex-wrap justify-between items-middle gap-5"
+    class="mt-10 card flex flex-wrap sm:flex-nowrap justify-between items-middle gap-5"
     @submit.prevent="handleShorten"
   >
     <div class="form-group w-full sm:w-6/12">
