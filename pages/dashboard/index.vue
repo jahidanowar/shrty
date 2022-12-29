@@ -5,7 +5,7 @@ useHead({
   title: "Dashboard",
 });
 definePageMeta({
-  middleware: ["auth"],
+  middleware: "auth",
 });
 
 const client = useSupabaseClient<Database>();

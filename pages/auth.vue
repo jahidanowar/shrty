@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+definePageMeta({
+  middleware: "guest",
+});
 const config = useRuntimeConfig();
 useHead({
   title: "Authenticate",
