@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const config = useRuntimeConfig();
 useHead({
   title: "Authenticate",
 });
@@ -9,6 +10,9 @@ const handleGithubLogin = async () => {
     isLoading.value = true;
     auth.signInWithOAuth({
       provider: "github",
+      options: {
+        redirectTo: `${config.public.appUrl}/dashboard`,
+      },
     });
   } catch (error) {
     console.log(error);
