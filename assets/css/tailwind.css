@@ -34,3 +34,8 @@ body::before{
 input[type="text"], input[type="email"], input[type="password"]{
     @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg w-full py-2 px-3;
 }
+
+input[type="text"]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    @apply text-white/80 opacity-50 text-sm;
+  }
+  

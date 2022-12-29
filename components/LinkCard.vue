@@ -9,20 +9,20 @@ const config = useRuntimeConfig();
 
 <template>
   <div
-    class="link card mb-5 flex justify-end sm:justify-between flex-wrap gap-5 hover:border-white/30 transition-all duration-200"
+    class="link card mb-5 flex justify-between gap-5 hover:border-white/30 transition-all duration-200"
   >
     <div>
       <div class="text-xl">
         <span class="text-amber-500 font-bold">/{{ link.key }}</span>
       </div>
       <div class="text-white/50">
-        {{ link.long_url.slice(0, 30) + "..." }}
+        {{ link.long_url.slice(0, 20) + "..." }}
       </div>
     </div>
     <div class="link-ation flex justify-between">
-      <div class="link-stats flex flex-col items-end">
+      <div class="link-stats flex flex-col items-end justify-center">
         <div class="flex items-end">
-          <span class="text-white leading-none">
+          <span class="text-white leading-none text-sm sm:text-base">
             {{ link.total_clicks }}
           </span>
           <svg
@@ -31,7 +31,7 @@ const config = useRuntimeConfig();
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 ml-2"
+            class="w-4 h-4 sm:w-6 sm:h-6 ml-2"
           >
             <path
               stroke-linecap="round"
@@ -41,7 +41,9 @@ const config = useRuntimeConfig();
           </svg>
         </div>
         <div class="text-white/50">
-          <span class="text-sm">{{ link.created_at?.slice(0, 10) }}</span>
+          <span class="text-xs sm:text-sm">{{
+            link.created_at?.slice(0, 10)
+          }}</span>
         </div>
       </div>
       <CopyBtn :data="config.public.appUrl + '/' + link.key" />
