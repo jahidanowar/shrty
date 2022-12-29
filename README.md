@@ -1,42 +1,64 @@
-# Nuxt 3 Minimal Starter
+# Shrty - Nuxt 3 URL Shortener
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple URL shortener built with Nuxt 3 and Supabase, Designed with Tailwind CSS.
 
-## Setup
+[Full Video Link](https://youtu.be/fY2sfrV2zho)
 
-Make sure to install the dependencies:
+## Topics
 
-```bash
-# yarn
-yarn install
+- [x] Introduction to Nuxt 3 and Supabase
+- [x] Project Setup
+- [x] Creating the UI
+- - [x] Header
+- - [x] Default Layout
+- - [x] Home Page
+- - [x] Auth Page
+- - [x] Dashboard Page
+- [x] Github Authentication
+- [x] Creating Short Links
+- [x] Fetching Short Links
+- [x] Supabase Trigger & Functions (Click Count automation)
+- [x] Creating the Redirect Page
+- [x] Custom 404 Page
+- [x] Deploying to Netlify
 
-# npm
-npm install
+## Usage
 
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
+Copy the `.env.example` file to `.env` and fill the values.
 
 ```bash
-npm run build
+cp .env.example .env
 ```
 
-Locally preview production build:
+Install the dependencies
 
 ```bash
-npm run preview
+npm install # or yarn install
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Run the development server
+
+```bash
+npm run dev # or yarn dev
+```
+
+## Deployment
+
+Vercel deployment is already covered in the video.
+
+For digital ocean deployment, follow the [Digital Ocean Deployment Guide](https://www.youtube.com/watch?v=hANbHC90xug&ab_channel=JahidAnowar).
+
+## Contributions & Issues
+
+Please feel free to raise an issue for suggestions or bugs. You can ,essage me on twitter [@jahidDev](https://twitter.com/jahidDev).
+
+## License
+
+> _The project is released under the WTFPL2 [Do What The F\*ck You Want To Public License](LICENSE)._
+
+<hr>
+
+> [jahid.dev](https://jahid.dev) &nbsp;&middot;&nbsp;
+> YouTube [@jahidanowar](https://jahid.dev/go/yt) &nbsp;&middot;&nbsp;
+> Twitter [@jahidDev](https://jahid.dev/go/tt) &nbsp;&middot;&nbsp;
+> Instagram [@jahidDev](https://jahid.dev/go/ig)
