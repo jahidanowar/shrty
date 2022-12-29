@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: "Shrtybase - Nuxt 3 + Supabase URL Shortener with analytics",
+});
+</script>
 
 <template>
   <section class="h-screen grid place-items-center">

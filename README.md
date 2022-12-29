@@ -15,6 +15,7 @@ A simple URL shortener built with Nuxt 3 and Supabase, Designed with Tailwind CS
 - - [x] Auth Page
 - - [x] Dashboard Page
 - [x] Github Authentication
+- [x] Supabase Row Level Security (RLS) Setup
 - [x] Creating Short Links
 - [x] Fetching Short Links
 - [x] Supabase Trigger & Functions (Click Count automation)
