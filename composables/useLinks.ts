@@ -1,4 +1,4 @@
-// import geoip from "geoip-lite";
+import geoip from "geoip-lite";
 import { Database } from "~~/types/supabase";
 
 export const useLinks = () => {
@@ -73,11 +73,11 @@ export const useLinks = () => {
         clickData.ip = ua.ip;
 
         if (ua.ip) {
-          // const geo = geoip && geoip.lookup(ua.ip);
-          // if (geo) {
-          //   clickData.country = geo.country;
-          //   clickData.city = geo.city;
-          // }
+          const geo = geoip && geoip.lookup(ua.ip);
+          if (geo) {
+            clickData.country = geo.country;
+            clickData.city = geo.city;
+          }
         }
       }
 
