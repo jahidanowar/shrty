@@ -12,7 +12,10 @@ const config = useRuntimeConfig();
     class="link card mb-5 flex justify-between hover:border-white/30 transition-all duration-200"
   >
     <div>
-      <div class="text-amber-500 font-bold text-xl">/{{ link.key }}</div>
+      <div class="text-xl">
+        {{ config.public.appUrl }}
+        <span class="text-amber-500 font-bold">/{{ link.key }}</span>
+      </div>
       <div class="text-white/50">
         {{ link.long_url.slice(0, 40) + "..." }}
       </div>
