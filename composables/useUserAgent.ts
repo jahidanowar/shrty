@@ -6,13 +6,13 @@ type UserAgent = {
 export default function useUserAgent(): UserAgent | null {
   if (process.server) {
     const nuxtApp = useNuxtApp();
-    if (nuxtApp.ssrContext && nuxtApp.ssrContext.event.req) {
+    if (nuxtApp.ssrContext && nuxtApp.ssrContext.event.node.req) {
       const ip =
-        nuxtApp.ssrContext.event.req.headers["x-forwarded-for"] ||
-        nuxtApp.ssrContext.event.req.connection.remoteAddress || // for local dev
-        nuxtApp.ssrContext.event.req.socket.remoteAddress;
+        nuxtApp.ssrContext.event.node.req.headers["x-forwarded-for"] ||
+        nuxtApp.ssrContext.event.node.req.connection.remoteAddress || // for local dev
+        nuxtApp.ssrContext.event.node.req.socket.remoteAddress;
 
-      const ua = nuxtApp.ssrContext.event.req.headers["user-agent"];
+      const ua = nuxtApp.ssrContext.event.node.req.headers["user-agent"];
 
       return {
         userAgent: ua || "",

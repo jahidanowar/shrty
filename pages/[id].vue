@@ -16,6 +16,8 @@ if (data) {
 
   const ua = useUserAgent();
 
+  console.log({ ua });
+
   if (ua) {
     clickData.user_agent = ua.userAgent;
     clickData.ip = ua.ip;
@@ -29,10 +31,13 @@ if (data) {
     }
   }
 
-  await client.from("clicks").insert({
+  const click = await client.from("clicks").insert({
     link_id: data.id,
     ...clickData,
   });
+
+  console.log({ click });
+
   useExternalRedirect(data.long_url, 302);
 } else {
   throw createError({
