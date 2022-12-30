@@ -59,6 +59,9 @@ const handleLogin = async () => {
 
   if (data) {
     console.log(data);
+
+    // Redirect to home page
+    useRouter().push("/dashboard");
   }
 };
 
