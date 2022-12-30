@@ -13,7 +13,11 @@ const config = useRuntimeConfig();
   >
     <div class="w-1/2">
       <div class="text-xl">
-        <span class="text-amber-500 font-bold">/{{ link.key }}</span>
+        <NuxtLink
+          :to="{ name: 'dashboard-id', params: { id: link.key } }"
+          class="text-amber-500 font-bold"
+          >/{{ link.key }}</NuxtLink
+        >
       </div>
       <div class="text-white/50 text-xs sm:text-base">
         {{ link.long_url.slice(0, 20) + "..." }}
