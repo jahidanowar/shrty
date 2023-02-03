@@ -2,7 +2,7 @@
 
 A simple URL shortener built with Nuxt 3 and Supabase, Designed with Tailwind CSS.
 
-[Full Video Link](https://youtu.be/fY2sfrV2zho)
+[Full Video Course Link](https://www.youtube.com/playlist?list=PLYktmUPNARbr_MoQRTR469XghqNBl4vF8)
 
 ## Topics
 
